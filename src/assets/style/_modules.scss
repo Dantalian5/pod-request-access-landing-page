@@ -58,7 +58,7 @@
 .form {
 	width: 100%;
 	max-width: 26.6875rem;
-	overflow: hidden;
+	position: relative;
 	&__input,
 	&__btn {
 		width: 100%;
@@ -74,6 +74,19 @@
 		background: #54e6af;
 		box-shadow: 0px 25px 20px -20px rgba(84, 230, 175, 0.5);
 		text-align: center;
+	}
+	&__error {
+		color: #fb3e3e;
+		font-size: 0.75rem;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 1;
+
+		position: absolute;
+		bottom: -0.5rem;
+		left: 2rem;
+		right: 2rem;
+		transform: translate(0%, 100%);
 	}
 }
 @media (min-width: 37.5rem) {
@@ -110,7 +123,6 @@
 		}
 	}
 	.form {
-		position: relative;
 		border-radius: 1.75rem;
 		background: #2c344b;
 		display: flex;
@@ -122,7 +134,6 @@
 		}
 		&__input {
 			margin-bottom: 0;
-			padding-inline: 2rem 1rem;
 		}
 		&__btn {
 			max-width: fit-content;
