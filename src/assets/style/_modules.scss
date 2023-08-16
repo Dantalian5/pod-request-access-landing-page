@@ -1,0 +1,131 @@
+@use "base/variables" as var;
+.heading {
+	font-size: 1.625rem;
+	line-height: 1.46; /* 146.154% */
+	text-transform: uppercase;
+}
+.paragraph {
+	font-size: 0.9375rem;
+	line-height: 1.66; /* 166.667% */
+}
+.font-form {
+	font-size: 0.875rem;
+	line-height: 2; /* 200% */
+}
+.heading,
+.paragraph {
+	text-align: center;
+}
+.heading,
+.paragraph,
+.font-form {
+	font-weight: 400;
+}
+.box {
+	&__title {
+		color: #54e6af;
+		margin-bottom: 1rem;
+		& > span {
+			color: var.$c-white;
+		}
+	}
+	&__text {
+		color: #c2cbe5;
+		margin-bottom: 2rem;
+		max-width: 27.8125rem;
+	}
+	&__partners {
+		margin-bottom: 3rem;
+		padding-inline: 0.3rem;
+	}
+	&__form {
+		margin-bottom: 2rem;
+	}
+}
+.partners {
+	display: flex;
+	width: 100%;
+	max-width: 33.5rem;
+	gap: 1.5rem;
+	align-items: center;
+	justify-content: center;
+	&__item {
+		& > img {
+			max-width: 100%;
+		}
+	}
+}
+.form {
+	width: 100%;
+	max-width: 26.6875rem;
+	overflow: hidden;
+	&__input,
+	&__btn {
+		width: 100%;
+		border-radius: 1.75rem;
+		padding: 0.5rem 2rem;
+	}
+	&__input {
+		background: #2c344b;
+		margin-bottom: 1rem;
+		color: #fff;
+	}
+	&__btn {
+		background: #54e6af;
+		box-shadow: 0px 25px 20px -20px rgba(84, 230, 175, 0.5);
+		text-align: center;
+	}
+}
+@media (min-width: 37.5rem) {
+	.heading {
+		font-size: 3rem;
+		line-height: 1.16;
+	}
+	.paragraph {
+		font-size: 1.125rem;
+		line-height: 1.55;
+	}
+	.heading,
+	.paragraph {
+		text-align: start;
+	}
+	.font-form {
+		font-size: 0.875rem;
+		line-height: 2; /* 200% */
+	}
+	.box {
+		&__title {
+			margin-bottom: 1.95rem;
+		}
+		&__text {
+			margin-bottom: 2.5rem;
+		}
+		&__partners {
+			order: 2;
+			margin-bottom: 0;
+			padding-inline: 0;
+		}
+		&__form {
+			margin-bottom: 4rem;
+		}
+	}
+	.form {
+		position: relative;
+		border-radius: 1.75rem;
+		background: #2c344b;
+		display: flex;
+		padding: 0.31rem;
+		&__input,
+		&__btn {
+			padding-block: 0.56rem;
+			padding-inline: 1.69rem;
+		}
+		&__input {
+			margin-bottom: 0;
+			padding-inline: 2rem 1rem;
+		}
+		&__btn {
+			max-width: fit-content;
+		}
+	}
+}

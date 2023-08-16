@@ -1,0 +1,6 @@
+@use "base/variables" as var;
+
+body {
+	font-family: var.$ff-chivo;
+	background: var.$c-dark-blue;
+}

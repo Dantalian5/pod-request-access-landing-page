@@ -19,12 +19,77 @@
 		<title>Frontend Mentor | Pod request access landing page</title>
 
 		<!-- Stylesheet setup -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Chivo&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="assets/style/style.scss" />
 	</head>
 	<body>
-		Publish your podcasts everywhere. Upload your audio to Pod with a single
-		click. We&#8217;ll then distribute your podcast to Spotify, Apple Podcasts,
-		Google Podcasts, Pocket Casts and more! Request access
+		<main class="container">
+			<div class="container__logo">
+				<img class="logo__img" src="assets/img/desktop/logo.svg" alt="logo" />
+			</div>
+			<div class="container__box">
+				<h1 class="box__title heading">
+					Publish your podcasts <br /><span>everywhere.</span>
+				</h1>
+				<p class="box__text paragraph">
+					Upload your audio to Pod with a single click. We&#8217;ll then
+					distribute your podcast to Spotify, Apple Podcasts, Google Podcasts,
+					Pocket Casts and more!
+				</p>
+				<div class="box__partners partners">
+					<div class="partners__item">
+						<img src="assets/img/desktop/spotify.svg" alt="Spotify logo" />
+					</div>
+					<div class="partners__item">
+						<img
+							class="partners__item"
+							src="assets/img/desktop/apple-podcast.svg"
+							alt="Apple podcast logo"
+						/>
+					</div>
+					<div class="partners__item">
+						<img
+							class="partners__item"
+							src="assets/img/desktop/google-podcasts.svg"
+							alt="Google podcast logo"
+						/>
+					</div>
+					<div class="partners__item">
+						<img
+							class="partners__item"
+							src="assets/img/desktop/pocket-casts.svg"
+							alt="Pocket podcast logo"
+						/>
+					</div>
+				</div>
+				<form id="email-form" class="box__form form" name="email-form">
+					<input
+						id="email-input"
+						class="font-form form__input"
+						type="email"
+						placeholder="Email address"
+						pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+						required
+						name="email-form"
+						title="mail@example.com"
+					/>
+					<button
+						id="email-btn"
+						class="font-form form__btn"
+						type="submit"
+						name="email-form"
+					>
+						Request access
+					</button>
+				</form>
+			</div>
+		</main>
+
 		<!-- add javascript file -->
 		<script src="assets/js/script.js"></script>
 	</body>

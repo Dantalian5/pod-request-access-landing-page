@@ -1,0 +1,100 @@
+@use "base/variables" as var;
+
+.container {
+	min-height: min(64rem, 100vh);
+	max-width: 90rem;
+	margin-inline: auto;
+	padding-inline: 1.5rem;
+	padding-block: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	position: relative;
+	background: #121725;
+	&::before,
+	&::after {
+		position: absolute;
+		z-index: 1;
+	}
+	&::before {
+		content: "";
+		inset: 0;
+		background: url(../img/mobile/image-host.jpg) 0 0 / cover;
+		opacity: 0.1;
+	}
+	& > * {
+		position: relative;
+		z-index: 2;
+	}
+	&__logo {
+		margin-bottom: 3.56rem;
+	}
+	&__box {
+		margin-block: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+@media (min-width: 37.5rem) {
+	.container {
+		align-items: start;
+		padding-inline: 2.5rem;
+		padding-block: 3.125rem;
+		&::before {
+			left: 36%;
+			bottom: 25%;
+			background: url(../img/tablet/image-host.jpg) 0 0 / cover;
+			opacity: 0.8;
+		}
+		&::after {
+			content: "";
+			background: url(../img/desktop/bg-pattern-dots.svg) 0 0 / cover;
+			background-size: cover;
+			bottom: 0;
+			left: 2.5rem;
+			width: 14.5rem;
+			height: 6.5rem;
+		}
+		&__logo {
+			margin-bottom: 2rem;
+		}
+		&__box {
+			width: 92.5%;
+			max-width: 45.1875rem;
+			background: #121725;
+			padding-block: 5.8125rem;
+			padding-inline: 0 1rem;
+			align-items: start;
+		}
+	}
+}
+
+@media (min-width: 62.5rem) {
+	.container {
+		padding-inline: 10.31rem;
+		padding-block: 6.38rem;
+		justify-content: space-between;
+		&::before {
+			left: 36%;
+			top: 14.5%;
+			bottom: 14.5%;
+			background: url(../img/desktop/image-host.jpg) 0 0 / cover;
+		}
+		&::after {
+			bottom: 8%;
+			left: auto;
+			right: 0;
+		}
+		&__logo {
+			//margin-bottom: auto;
+		}
+		&__box {
+			padding-block: 5.5rem 2rem;
+			margin-block: 0;
+		}
+	}
+}
