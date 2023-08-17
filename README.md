@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Live site (vercel)](https://your-solution-url.com)
-- Live Site URL: [Github repo](https://your-live-site-url.com)
+- Solution URL: [Github repo](https://github.com/Dantalian5/pod-request-access-landing-page.git)
+- Live Site URL: [Live site (Vercel)](https://pod-request-access-landing-page-sand.vercel.app)
 
 ## My process
 
